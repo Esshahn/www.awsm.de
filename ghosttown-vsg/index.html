@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<head>
+<title>Ghost Town JS - A JavaScript remake of the Commodore C16 game.</title>
+<meta name="description" content="A remake of the C16 game Ghost Town in JavaScript.">
+<meta name="author" content="Ingo Hinterding">
+<meta charset="UTF-8">
+<meta property="og:title" content="Ghost Town JS">
+<!--<meta property="og:image" content="link_to_image">-->
+<meta property="og:description" content="Ghost Town JS, a JavaScript remake of the Commodore C16 game!">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="Ghost Town JS, a JavaScript remake of the Commodore C16 game!"/>
+<meta name="twitter:title" content="Ghost Town JS"/>
+<meta name="twitter:creator" content="@awsm9000"/>
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+
+</head>
+<body >
+<h1>Ghost Town JS</h1>
+<img class="img" src="img/ghosttown-tv-big.png" width="70%">
+
+
+<h2>1986</h2>
+
+<p>
+199 Mark. Soviel habe ich für meinen ersten Computer bezahlt, das war 1986, der Computer ein Commodore C16 samt Datasette und der Verkäufer der große Bruder von Stefan aus meiner Klasse. Es ist Nachmittag und wir stehen im Wohnzimmer seiner Eltern. Die Flügeltür einer erdrückenden Schrankwand schwingt auf und aus dem Familienfernseher erstrahlt schon bald ein blau-weißes Rechteck mit dem Hinweis:
+</p>
+<strong>COMMODORE BASIC V3.5 12277 BYTES FREE
+<br/>READY.</strong>
+<p>
+Auf dem Teppichboden unter dem Bildschirm liegt in einem Gewirr aus Kabeln das, was schon bald mein liebstes Hobby werden sollte. Vor meinen staunenden Augen tippt Stefans Bruder etwas auf der Tastatur:
+</p>
+<!--
+<blockquote>
+10 PRINT "WIE HEISST DU";
+<br />20 INPUT A$
+<br />30 PRINT "HEISST DU WIRKLICH "+ A$;
+<br />40 INPUT A$
+<br />50 PRINT "HAESSLICHER NAME!"
+</blockquote>
+-->
+<p>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/emxvRFAxnbo" frameborder="0" allowfullscreen></iframe>
+</p>
+<p>
+Fünf Zeilen BASIC, die meinen weiteren Lebensweg bestimmten. Und dann diese kleine schwarze Kiste, die tut, was man ihr sagt! So aufregend und ganz anders als unser erziehungsresistenter Rauhhaardackel oder "Husten-Markus" zwei Häuser weiter, der, wie der Name schon sagt, meistens krank war und nur mit einem spielen wollte, wenn er auch garantiert alles bestimmen durfte, und zwar immer und alles. Und immer. Einen Tag und ein irgendwie-dann-doch gemeistertes Problemgespräch mit den Eltern später stand er dann bei mir im Kinderzimmer: mein erster Computer!
+</p>
+<p>
+Der C16 unterschied sich vor allem in zwei Dingen vom drei Jahre älteren C64: ein hervorragendes BASIC 3.5 und eine nahezu nicht vorhandene Raubkopierszene. Wenn also ein Freund ein neues Spiel erstanden hatte, dann wurden zwei Kassettenrekorder zusammengesteckt und Leerkassetten bespielt. Wer ein Doppelkassettendeck hatte, war natürlich der König - aber Vorsicht vor "High Speed Dubbing" - das klappte nur selten. 
+</p>
+<p>
+Gute Spiele waren also Mangelware und so vertrieb ich mir die Zeit vor allem mit selbst geschriebenen Programmen und Animationen in Zeichensatzgrafik. Der Computer war die Bühne, der Programmcode die Schauspieler und ich der Regisseur. Die Möglichkeiten schienen unendlich und das Handbuch verbarg auf jeder Seite neue Allmachtsphantasien in acht Bit. Andere Hobbies verloren zeitgleich jeglichen Reiz, getreu dem Motto: "Sommer ist, wenn man in kurzen Hosen vor'm Computer sitzt."
+</p>
+<p>
+Einen weiteren Vorteil des C16 gegenüber dem C64 konnte ich leider nie geltend machen. Mit 121 unterschiedlichen Farben war der C16 dem C64 mit seinen 16 Farben deutlich überlegen. Doch einige Wochen zuvor hatte ich mich von meiner vier Jahre älteren Schwester über's Ohr hauen lassen: ich bekam den kleinen Schwarzweißfernseher und die Micky Maus Sitztonne, sie dafür den dicken Farbfernseher von Oma, die kurz zuvor zu den Ahnen abgeritten war. So ganz verarbeitet habe ich das wohl nie. Also, das mit dem Schwarzweißfernseher.
+</p>
+<p>
+Ab und zu gab's dann doch ganz gute Spiele, "Winter Olympiade" zum Beispiel war "megageil" (1986 war schließlich das Jahr von <a href="https://www.youtube.com/watch?v=w_P3uwRiimo">Bruce & Bongos Nummer eins Hit</a>), und die deutsche Firma <a href="http://videospielgeschichten.de/kingsoft.html">Kingsoft</a> nahm sich mit günstigen Spielen auf Datasette zwischen 9 und 39 Mark den unterversorgten Besitzern der 264er Serie (C16, C116 und Plus/4) an. 
+</p>
+
+<h2>Ghost Town</h2>
+<p>
+Der Puls rast und das Herz pocht ganz oben im Hals, als ich auf dem Heimweg von der Schule im Schaufenster des Brillenladens ein neues Spiel für den C16 entdecke: Ghost Town. Das gesparte Geld reicht, das wusste ich, man ist als Zwölfjähriger auf solche Extremsituationen bestens vorbereitet. Da waren die fünf Mark vom letzten Kaffeetrinken bei Oma und mindestens nochmal soviel im Porzellansparschwein mit dem praktischen Gummipfropfen an der Unterseite - passt! Nach Hause radeln, schnell Mittag essen, Geld zusammensuchen, zurück zum Optiker (Mist! Der macht ja erst um 15 Uhr wieder auf!) und dann direkt weiter zu Hendrik. Der hatte einen Plus/4 mit 64kb Speicher und einen eigenen Fernseher (in Farbe!) im Hobbykeller - unser boy cave! 
+</p>
+<p>
+Computer eingeschaltet, Kassette in die Datasette eingelegt, los ging's.
+</p>
+<blockquote>
+LOAD
+<br />PRESS PLAY ON TAPE
+<br />OK
+<br />SEARCHING
+<br />GHOST TOWN C16
+<br />LOADING
+</blockquote>
+<p>
+Der Fliesentisch, der zum Kleiderständer umfunktionierte Heimtrainer und die ausgediente Schreibmaschine verschwanden. Die farbigen Pixel des Fernsehers erfassten den ganzen Raum und zogen uns hinein in die geheimnisvolle Ghost Town.
+</p>
+<blockquote>
+"Suchen Sie die Schatztruhe der Geisterstadt und oeffnen Sie diese ! Toeten Sie Belegro, den Zauberer und weichen Sie vielen anderen Wesen geschickt aus. Bedienen Sie sich an den vielen Gegenstaenden, welche sich in den 19 Bildern befinden. Viel Spass !"
+</blockquote>
+<p>
+Über das Spiel selbst wurde schon oft und gut geschrieben, auch <a href="http://videospielgeschichten.de/ghosttown.html">hier auf Videospielgeschichten.de</a>. Wichtig ist vor allem eines: es stammt aus einer Zeit als das Wort "Perma-Death" noch ein Pleonasmus war, denn jeder Tod brachte das unwiederbringliche Ende mit sich. Auch Ghost Town verzeiht keine Fehler, ein unbedachter Schritt, ein in der falschen Reihenfolge aufgenommenes Objekt und nach dem "blue screen of death" erscheint wieder das Titelbild mit der höhnischen Aufforderung: "Play it again".
+</p>
+<p>
+Doch gerade diese Verlustangst mit dem ständigen Bildschirmtod vor Augen übt einen beeindruckenden Sog aus, eine Intensität, wie man sie heute vielleicht nur noch von Resident Evil kennen mag, welches den Spieler mit ständiger Munitionsknappheit ins Unbekannte schubst. 
+</p>
+<p>
+Für uns war Ghost Town ein fast real erlebtes Abenteuer, auf das man sich am besten in Begleitung begab. Der eine hielt den Joystick fest im Griff (Tennisschweissbänder waren da schon fast Pflicht), der andere studierte die Notizen und Zeichnungen, die Fortschritt und Scheitern dokumentierten, gab Tipps und Hinweise, um dann gemeinsam auf die nächste Falle zu treffen und die beste Vorgehensweise zu besprechen, bevor man dann, durch die neueste Todesursache in Schockstarre versetzt, die Reise von Neuem antrat. Joystickübergabe, schnell noch fünf Salzstangen quer zwischen die Backen geschoben - und weiter.
+</p>
+<p>
+Ich glaube wir haben das Geheimnis der Ghost Town nie gelüftet, Hendrik und ich. Irgendwann kamen wir nicht weiter, der Joystick hatte ne Macke bekommen und das nächste Spiel wartete darauf, erobert zu werden. Das Rätsel um die Geisterstadt blieb uns verborgen. 
+</p>
+<p>
+"Wir sehen uns wieder Belegro! Und wenn es 30 Jahre dauert!" drohte ich noch. 
+Was natürlich nicht stimmt. Aber schön in die Geschichte passt.
+</p>
+
+<h2>2016</h2>
+<p>
+Ich könnte jetzt schreiben, ich wäre zu Besuch bei den Eltern gewesen, hätte den Dachboden entrümpelt und in der alten Kinderzimmerkiste meine Notizen über Ghost Town gefunden, mit dem Schwur and mein zukünftiges Selbst, "der Geisterstadt ihre Rätsel zu entlocken, und wenn es 30 Jahre dauern würde!". Weil's eben schön in die Geschichte passt. Aber auch, weil die Wahrheit manchmal etwas unglamourös daherkommt. 
+</p>
+<p>
+Inzwischen ist Softwareentwicklung mein Beruf und wenn ich neue Technologien verstehen möchte, suche ich mir ein kleines Projekt, welches genug Motivation mitbringt, die üblichen Durststrecken und WTF-Momente zu überstehen. Eine gute Gelegenheit, meinem Erzfeind Belegro einen erneuten Besuch abzustatten, beschließe ich. Man trifft mich eben immer zweimal.
+</p>
+
+<h2>Ghost Town JS</h2>
+
+<p>
+Jetzt wird's ein wenig technisch. Das Ziel ist ein Remake des Spieles für den Browser, aus genannten Gründen kommen <a href="http://www.pixijs.com/">pixi.js</a> als Engine und <a href="http://coffeescript.org/">CoffeeScript</a> als Scriptsprache zum Einsatz. Wichtigstes Tool neben einem <a href="https://www.sublimetext.com/">Texteditor</a> für den Code ist der Emulator (<a href="http://yape.homeserver.hu/">Yape</a> soll besser sein als <a href="http://vice-emu.sourceforge.net/">Vice</a>, den gibt's aber nicht für den Mac), um das Spiel zu analysieren und Daten zu extrahieren. 
+</p>
+<p>
+Ein paar Tutorials später stehen die Grundvoraussetzungen, nun geht es dem Originalspiel an den Kragen: wir betreten die Geisterstadt durch den Lieferanteneingang.
+</p>
+<p>
+Die Welt von Ghost Town ist wie ein Puzzle aus 256 unterschiedlichen Zeichen zusammengesetzt, die im "Character RAM" abgelegt sind. Das "Color RAM" definiert, welche Farben an welcher Stelle des Bildschirms dargestellt werden. Das "Screen RAM" zeigt, welche Zeichen an welcher Position angezeigt werden. Alle drei kombiniert ergeben das, was der Spieler auf dem Bildschirm sieht.
+</p>
+<div class="image">
+    <img class="img" src="img/ghosttown-chars.png" width="80%">
+    <div class="img-cite">
+        Im oberen Bereich des Spieles sieht man alle verfügbaren Zeichen von 00 bis FF.
+    </div>
+</div>
+<p>
+Ich entscheide, Character RAM (den Font) und Color RAM (die Farbe) mit einer Klappe zu erschlagen und zusammenzuführen, indem ich eine bereits colorierte Spritemap erstelle. Dazu extrahiere ich den Font, indem ich alle Zeichen des Spieles im Emulator darstelle, einen Screenshot mit 1:1 Pixeln (320x200) abspeichere und die Farbinformationen in Photoshop hinzufüge. Das Ergebnis ist eine Spritemap mit allen verfügbaren Zeichen, in der richtigen Reihenfolge sortiert von 00 bis FF (das wird später noch wichtig).
+</p>
+<div class="image">
+    <img class="img" src="img/ghosttown-spritemap.png">
+    <div class="img-cite">
+        Alle verfügbaren Zeichen fertig coloriert und geordnet in einem Bild.
+    </div>
+</div>
+<h2>Einmal die rote Pille bitte</h2>
+
+<p>
+Als nächstes werden die Leveldaten extrahiert. Dazu kann man den Emulator einfach an der Stelle pausieren, die man auslesen will und lässt sich das Screen RAM (beim C16 ist das $0c00-$0fe7) anzeigen. Jeder zweistellige Hexadezimalwert steht für ein definiertes Zeichen. Wir haben uns also für die rote Pille entschieden und blicken nun wie Neo durch eine Matrix aus Code auf die Welt im Computer. Wir können an jede beliebige Stelle springen, den Bauplan ändern und der ahnungslosen Spielfigur das Leben schwerer oder leichter machen. Ist hier eine Wand im Weg? Flink "0c 0d 0e" durch "df df df" ersetzt und schon haben wir freie Bahn. Da sind sie wieder, die Allmachtsphantasien.
+</p>
+
+<div class="image">
+    <img class="img" src="img/ghosttown-screenram.png">
+    <div class="img-cite">
+        Der erste Raum des Spieles in der Hexcode Ansicht.
+    </div>
+</div>
+<p>
+Wir wollen aber das unveränderte Spiel umsetzen, also speichern wir jeden Screen mittels <i>save "/Users/name/ghosttown/level-xx.bin" 0 0c00 0fe7</i> ab. In Summe kommen wir auf 19 Räume, 30 Nachrichten auf deutsch, 30 auf englisch, Einleitung und Siegesscreen auf deutsch und englisch sowie ein Titelbild, insgesamt also 84 unterschiedliche Bildschirme. Die Verwendung der Binärdaten birgt Vor- und Nachteile. Zum einen müssen diese nur sauber eingelesen, verarbeitet und angezeigt werden, um eine originalgetreue Darstellung zu garantieren. Kein Pixel kann sich so am falschen Platz befinden. Der Nachteil der Methode ist, falls man etwas übersehen hat, dann existiert es auch im Remake nicht.
+</p>
+<p>
+Die Darstellung der Levels ist nun recht simpel: Binärdaten einlesen und Zeile für Zeile das entsprechende Zeichen aus der Spritemap auf dem Bildschirm anzeigen. Wenn alles funktioniert, hat man eine exakte Kopie der Spielegrafik.
+</p>
+
+<div class="image">
+    <img class="img" src="img/ghosttown-comparison.png" width="80%">
+    <div class="img-cite">
+        Im Vergleich: oben die Ansicht im Browser, unten im Emulator.
+    </div>
+</div>
+<h2>Jetzt kommt Leben in die Bude</h2>
+<p>
+Da die Spielfigur selbst auch nur aus Zeichensatzgrafik zusammengesetzt ist, können wir sie einfach an die gewünschte Stelle in die Leveldaten kopieren und verschieben, je nachdem, in welche Richtung sich der Spieler bewegen möchte. Wird etwa die rechte Pfeiltaste gedrückt, schauen wir, welche Zeichen sich rechts neben der Spielfigur befinden. "df" steht etwa für ein leeres Feld und die Spielfigur kann an die neue Postion kopiert werden. Befindet sich ein Hindernis im Weg (Busch, Mauer, Wasser usw.) geht es erstmal nicht weiter.
+</p>
+<p>
+Dieses einfache Prinzip ist der Schlüssel für die gesamte Logik des Spieles. Der Ablauf ist immer gleich und funktioniert in etwa so:
+</p>
+<blockquote>
+1. Der Spieler drückt eine Richtungstaste
+<br/>2. Ist das Feld in dieser Richtung frei? 
+<br/>3. Ja: Spielfigur bewegen
+<br/>4. Nein: Zeichencode prüfen und je nach Raum die passende Aktion auslösen
+</blockquote>
+
+<h2>Das Geheimnis der Eierpflanze</h2>
+
+<p>
+<img src="img/ghosttown-eggplant.png" class="img-float">
+Jetzt bauen wir nach gleichem Muster die Rätsel im Spiel auf. Ghost Town lässt sich nur wenig Information entlocken und daher wussten damals die wenigsten Spieler, was denn dieses weiße Ding im ersten Raum darstellte. Die <a href="http://plus4world.powweb.com/dl/maps/ghosttown/kingsoft_ghost_town_solution_1.gif">handgezeichnete Komplettlösung</a> von Kingsoft selbst verrät es (Achtung Spoiler!): es handelt sich um einen Handschuh, den man benötigt, um unverletzt an die Heckenschere zu gelangen. An den Handschuh wiederum gelangt man nur mit der Leiter, für die wiederum.... usw. usw.
+
+</p>
+<p>
+Die Logik für den Handschuh sieht also grob so aus:
+</p>
+<blockquote>
+1. Der Spieler bewegt sich zum Handschuh
+<br/>2. Befindet sich die Leiter im Inventar?
+<br/>3. Ja: Handschuh aufnehmen, Leiter wegwerfen
+</blockquote>
+<p>
+Der tatsächliche Code liest sich fast genauso einfach:
+</p>
+<blockquote>
+if "a9" in new_position
+<br/>&nbsp;&nbsp;if "ladder" in player.inventory    
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;player.add "gloves" 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;player.remove "ladder"        
+</blockquote>
+<p>
+Daß es sich beim Handschuh um das Zeichen "A9" handelt, kann man leicht an der Spritemap ablesen. Nach diesem Prinzip ist jeder Raum des Spieles aufgebaut.
+</p>
+
+<h2>Das wahre Geheimnis der Ghost Town</h2>
+<p>
+ Ich merkte bald, daß Udo Gertz, der Entwickler des Originals, genauso vorgegangen sein musste wie ich, denn überall im Hexcode verstreut fand ich kleine hilfreiche "Geheimzeichen": so ist etwa eine bestimmte Tür im Spiel die sichere Passage in den nächsten Raum, äußerlich jedoch nicht von drei weiteren Türen zu unterscheiden, die den sofortigen Tod bedeuten. Schaut man jedoch in den Zeichencode, entdeckt man, daß diese eine Tür ein anderes Zeichen benutzt, welches für den normalen Spieler identisch aussieht.
+</p>
+<p>
+Da war ich also fündig geworden und entdeckte 30 Jahre später die wahren Geheimnisse der Ghost Town. Vor mir hat sie schon Udo Gertz durchstreift und überall versteckte Kreidezeichen hinterlassen, die mich nun an die Hand nehmen, vor Gefahren warnen und Lösungen anbieten, die so einfach wie genial sind.
+</p>
+<p>
+So folge ich ihm durch seine Welt und meistere Raum für Raum, lerne, verstehe. Die Herausforderungen steigen, doch sie sind nicht mehr unüberwindbar, bis ich schließlich wieder auf den letzten Gegner treffe, der sich mir schon als Kind in den Weg stellte:
+</p>
+<h2>Belegro</h2>
+<p>
+Am Ende der Reise wartet Belegro, der böse Zauberer, auf den zittrigen Helden. Ihn zu besiegen, erfordert exaktes Timing und Fingerspitzengefühl, denn eine falsche Bewegung und der Magier verfolgt den Spieler, holt ihn ein und beendet das Abenteuer auf der Zielgeraden.
+
+<div class="image">
+    <img src="img/ghosttown-showdown.png" class="img" width="80%">
+    <div class="img-cite">
+        Showdown.
+    </div>
+</div>
+</p>
+<p>
+Nun stehe ich wieder am Ort des Geschehens und Udo tritt einen Schritt zurück in den Hintergrund. Für die letzte Prüfung hat er keine hilfreichen Zeichen hinterlegt. Ich muß es allein schaffen.
+</p>
+<p>
+Damit das Spiel möglichst nah am Original bleibt, sollte sich der Endgegener auch genau so verhalten. Ist er zu langsam, ist das Ende zu einfach. Ist er zu schnell, ist es unschaffbar. Belegros Bewegungslogik lässt nur eine Spieltaktik zu, und eben diese muß auch im Remake genau so funktionieren. Ich beobachte Belegros Verhalten und leite daraus Regeln ab, mit dem flauen Gefühl, an dieser Stelle erneut zu scheitern.
+</p>
+<p>
+Doch dann wird mir klar: für jede Hürde im Spiel gibt es eine einfache Lösung, egal ob vor oder hinter der Bühne. Also erkläre ich "meinem" Belegro:
+</p>
+<blockquote>
+1. Gehe in die Richtung des Spielers, wenn der Weg frei ist
+<br />2. Ist der Weg versperrt, warte bis der Spieler sich bewegt
+<br />3. Weiter bei 1.
+</blockquote>
+<p>
+Ich betrete den Raum und treffe auf den gleichen bösen Zauberer, der mich schon als Kind verfolgte. Er hat sich kein bisschen verändert, fast unheimlich, aber ich habe dazu gelernt, kämpfe, triumphiere und verlasse - <strong>lebend!</strong> - die Ghost Town.
+</p>
+<p>
+<strong>Vielen Dank Udo Gertz für dieses großartige Erlebnis.</strong>
+</p>
+<p>
+GhostTownJS kann hier gespielt werden: <a href="http://www.awsm.de/ghosttown">http://www.awsm.de/ghosttown</a>
+</p>
+<p>
+PS: Wer gerne mehr über die technische Umsetzung des Spieles erfahren möchte, kann sich den kommentierten Sourcecode auf Github herunterladen: <a href="https://github.com/Esshahn/ghosttown">GhostTownJS auf Github</a>.
+</p>
+<p>
+Ingo Hinterding // Twitter: <a href="http://www.twitter.com/awsm9000">@awsm9000</a>
+</p>
+
+</body>
+</html>

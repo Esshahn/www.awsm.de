@@ -1,0 +1,155 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #444444;
+}
+
+body {
+  background-color: #111111;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+a {
+  color: #00bbff;
+  text-decoration: none;
+
+}
+
+.button {
+  padding: 10px 20px 10px 20px;
+  border: 2px dotted #444444;
+  font-size: 21px;
+  font-weight: bold;
+
+}
+
+.button:hover {
+  background-color: #00bbff;
+  color: #ffffff;
+}
+
+.menubutton {
+  padding: 10px 20px 10px 20px;
+  border: 2px dotted #444444;
+  font-size: 16px;
+  margin-top:40px;
+  margin-bottom:40px;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+
+.menubutton:hover {
+  background-color: #00bbff;
+  color: #ffffff;
+}
+
+#footer {
+  padding-top: 100px;
+  font-style: italic;
+}
+
+.infobox {
+  background-color: #eeeeee;
+  width: 60%;
+  padding:20px;
+  border: 2px solid #eeeeee;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+h1 {
+  color: #00bbff;
+  font-weight:normal;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 6px;
+  font-size: 28px;
+}
+
+h3 {
+  color: #444444;
+  margin-top: 0px;
+}
+
+#screens{
+padding-top: 40px;
+
+}
+
+img.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:5%;
+  margin-bottom: 0px;
+}
+
+.release{
+  padding: 20px;
+  border: 1px dotted #444444;
+  margin: 10px;
+  display:inline-block;
+}
+
+a.link{
+  display:block;
+  background-color: #eeeeee;
+  padding: 2px;
+}
+
+a.link:hover{
+  display:block;
+  padding: 2px;
+  background-color: #00bbff;
+  color: #ffffff;
+}
+
+p.info{
+  display:block;
+  background-color: #aaaaaa;
+  color: #000000;
+  margin: 0px;
+  padding: 4px 10px 4px 10px;
+  text-align: left;
+  width: 360px;
+  font-size: 14px;
+  min-height: 80px;
+}
+
+.newsdate{
+  vertical-align: top;
+  margin-right: 20px;
+  min-height: 50px;
+  margin-bottom: 10px;
+  float: left;
+  background-color: #dddddd;
+  padding: 6px;
+  padding-right: 12px;
+  text-align: left;
+  width: 100px;
+  text-transform: uppercase;
+  line-height: 14px;
+}
+
+.newstext{
+  text-align: left;
+}
+
+.clear
+{
+    clear: both;
+}
+
+p.spacer{
+  margin-top:60px;
+}
+
+
+.release_title
+{
+  padding: 10px;
+  color: #dddddd;
+  background-color: #333333;
+}

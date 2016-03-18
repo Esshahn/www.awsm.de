@@ -1,0 +1,91 @@
+
+html, body
+{
+  margin-left: 4%;
+  margin-right: 12%;
+  padding: 0;
+  color: #333333;
+  line-height: 28px;
+
+}
+
+
+body
+{
+  background-color: #eeeedd;
+  font-size: 18px;
+  font-family: Muli,Verdana,Helvetica;
+  background-image: url("../img/bg_woods.jpg");
+  background-repeat:repeat-x;
+  background-repeat:repeat-y;
+}
+
+
+
+a
+{
+  color: #225599;
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+.image{
+
+  padding: 6% 6% 6% 10%;
+}
+
+.img{
+  
+}
+
+.img-cite{
+
+  font-size: 14px;
+}
+
+.img-float{
+  float: left;
+  margin: 1% 4% 2% 0%;
+}
+
+
+h1 {
+line-height: 1em;
+color: #333333;
+font-size: 32px;
+margin-bottom: 80px;
+margin-top: 80px;
+}
+
+
+h2 {
+  font-weight:normal;
+  font-size: 28px;
+  padding-top: 20px;
+}
+
+h3 {
+  color: #22ddff;
+  font-weight:normal;
+  font-size: 22px;
+  margin-left: 10%;
+  margin-top: 60px;
+}
+
+blockquote
+{
+  background-color: #aaaa99;
+  margin: 0;
+  padding: 12px;
+  padding-left: 6%;
+  margin-bottom: 6%;
+}
+
+p
+{
+
+}
