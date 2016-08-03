@@ -37,11 +37,13 @@ a {
   margin-bottom:40px;
   text-transform: uppercase;
   line-height: 50px;
+
 }
 
 .menubutton:hover {
   background-color: #00bbff;
   color: #ffffff;
+ border: 2px solid #00bbff;
 }
 
 #footer {
