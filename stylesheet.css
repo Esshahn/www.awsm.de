@@ -3,10 +3,11 @@ html, body {
   margin: 0;
   padding: 0;
   color: #444444;
+  line-height: 140%;
 }
 
 body {
-  background-color: #111111;
+  background-color: #222222;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
@@ -61,6 +62,8 @@ a {
   margin-top: 80px;
 }
 
+
+
 h1 {
   color: #00bbff;
   font-weight:normal;
@@ -86,38 +89,63 @@ img.center{
   margin-right: auto;
   margin-top:5%;
   margin-bottom: 0px;
+
 }
 
 .release{
   padding: 20px;
-  border: 1px dotted #444444;
+  border: 1px solid #444444;
+  border-color: #666666 #222222 #111111 #222222;
   margin: 10px;
+  background-color: #333333;
   display:inline-block;
+  box-shadow: 0px 5px 10px 2px #111111;
+  vertical-align: top;
 }
 
 a.link{
   display:block;
-  background-color: #eeeeee;
+  background-color: #00bbff;
   padding: 2px;
+  margin-top:10px;
+  color: #ffffff;
 }
 
 a.link:hover{
   display:block;
   padding: 2px;
-  background-color: #00bbff;
+  background-color: #00ccff;
   color: #ffffff;
+  box-shadow: 0px 5px 8px 2px #222222;
 }
 
 p.info{
   display:block;
-  background-color: #aaaaaa;
-  color: #000000;
+  color: #888888;
   margin: 0px;
   padding: 4px 10px 4px 10px;
   text-align: left;
   width: 364px;
   font-size: 14px;
   min-height: 80px;
+}
+
+p.info a{
+  color: #0088dd;
+}
+
+.release h1{
+  font-size: 100%;
+  display:block;
+  padding: 2px;
+  margin-top:10px;
+  color: #cccccc;
+}
+
+.release img{
+  border: 1px solid #888888;
+  border-color: #111111 #333333 #666666 #333333;
+
 }
 
 .newsdate{
@@ -130,7 +158,6 @@ p.info{
   padding: 6px;
   padding-right: 12px;
   text-align: left;
-  
   text-transform: uppercase;
  
 }
@@ -148,10 +175,3 @@ p.spacer{
   margin-top:60px;
 }
 
-
-.release_title
-{
-  padding: 10px;
-  color: #dddddd;
-  background-color: #333333;
-}
