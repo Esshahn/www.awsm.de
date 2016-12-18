@@ -12,6 +12,7 @@ function init(){
   stage.fill("#000000"); 
 
   big_scroller_canvas = new canvas(320,40);
+  big_scroller_canvas_lines = new canvas(320,40);
   rasterbars_behind_logo = new canvas(320,95)
   mycanvas = new canvas(320,200);
   canvas_starfield = new canvas(320,66);
@@ -22,29 +23,31 @@ function init(){
   rasterbar_gold        = new image(basepath + "gfx/rasterbar-gold.gif");
   rasterbar_blue        = new image(basepath + "gfx/rasterbar-blue.gif");
   gradient_text         = new image(basepath + "gfx/gradient-text.gif");
-  copperbar1            = new image(basepath + "gfx/papillon_inner_gradient.gif");
-  copperbar2            = new image(basepath + "gfx/papillon_outer_gradient.gif");
   myfont                = new image(basepath + "gfx/c64font_yeti.gif");
   scrollfont            = new image(basepath + "gfx/c64font_yeti_big.gif");
-  big_scroller_gradient = new image(basepath + "gfx/big_scroller_gradient.gif");
+  scrollfont_lines      = new image(basepath + "gfx/c64font_yeti_big-lines.gif");
+  big_scroller_gradient = new image(basepath + "gfx/gradient-big-scroller.gif");
 
   myfont.initTile(8,9,33);
   scrollfont.initTile(8*4,9*4,33);
+  scrollfont_lines.initTile(8*4,9*4,33);
 
   myscrolltext_big = new scrolltext_horizontal();
-  myscrolltext_big.scrtxt="CRACKED ON 02/04/87   GREETINGS TO MICRO-MIX,FUTURE PROJECTS,THE COMMODORE BOYS,TRIAD,HOTLINE,UCF,1001-CREW,MZP,HEADBANGER,SYNTAX 2001,RADWAR,DCS,HQC,BRIAN,DANISH GOLD AND KRABAT    SPECIAL GREETINGS AND THANKS FOR THE CARDRUNCHER GOES TO    1001                                                                                  ";
+  myscrolltext_big.scrtxt="CRACKED ON 02/04/87   GREETINGS TO MICRO-MIX,FUTURE PROJECTS,THE COMMODORE BOYS,TRIAD,HOTLINE,UCF,1001-CREW,MZP,HEADBANGER,SYNTAX 2001,MAYDAY!,RADWAR,DCS,HQC,BRIAN,DANISH GOLD AND KRABAT    SPECIAL GREETINGS AND THANKS FOR THE CARDRUNCHER GOES TO     1001    ^P2                                                                        ";
   myscrolltext_big.init(big_scroller_canvas,scrollfont,5.2);
 
+  myscrolltext_big_lines = new scrolltext_horizontal();
+  myscrolltext_big_lines.scrtxt=myscrolltext_big.scrtxt;
+  myscrolltext_big_lines.init(big_scroller_canvas_lines,scrollfont_lines,5.2); //5.3
+
+
   // init variables
-  copperY                    = -100;
-  inner_gradient_y           = 0;
-  scrollColor                = 0;
-  scrollColorYpos            = 170;
-  big_scroller_gradient_ypos = -178; // -178
-  show_big_scroller          = false;
+  big_scroller_gradient_ypos = -32;
+  big_scroller_lines_gradient_ypos = 0;
   raster_blue_y              = 0;
   gradient_text_x            = -400;
-  
+  fps_counter                = 0;
+
 
   // SID data
   SAMPLES_PER_BUFFER = 16384;  // allowed: buffer sizes: 256, 512, 1024, 2048, 4096, 8192, 16384
@@ -53,7 +56,7 @@ function init(){
   var gainNode;
   var analyzerNode;
 
-  //playSong(basepath + 'Beyond_the_Forbidden_Forest.sid',10);
+  playSong(basepath + 'Beyond_the_Forbidden_Forest.sid',10);
 
   // generate the starfield
   starfield = new Starfield(canvas_starfield,20,2,1,1,0,1,5,["#ffffff"]);
@@ -144,21 +147,10 @@ function Starfield(canvas,amount,w,h,xdir, ydir, minSpeed,maxSpeed,colors){
 
 function render(){
 
-    // the movement of the charset gradient scrollers
-    copperY += 0.86;
-    if (copperY > 0) {
-      copperY = -100;
-    } 
-
-    if (inner_gradient_y > -64) {
-      inner_gradient_y -= 0.26;
-    }else{
-      show_big_scroller = true;
-    } 
-    
     // clear canvases
     mycanvas.fill("#000000");  
     big_scroller_canvas.clear(); 
+    big_scroller_canvas_lines.clear(); 
     rasterbars_behind_logo.fill("#000000");
     canvas_starfield.clear();
 
@@ -171,12 +163,10 @@ function render(){
     rasterbars_behind_logo.quad(0,92,320,3,"#000000");
 
     // draw blue rasterbars behind logo
-
     raster_blue_y += 0.825;
     if (raster_blue_y >95+32) {
       raster_blue_y = 0;
     } 
-    //raster_blue_y = 0;
     rasterbar_blue.draw(rasterbars_behind_logo,0,-32+raster_blue_y);
     rasterbar_blue.draw(rasterbars_behind_logo,0,95-raster_blue_y);
     rasterbars_behind_logo.draw(mycanvas,0,0);
@@ -198,23 +188,30 @@ function render(){
 
     rasterbar_gold.draw(mycanvas,0,170);
 
-    // the big scroller
+    // the normal font of the big scroller 
 
-    big_scroller_gradient_ypos += 0.85;
-    if (big_scroller_gradient_ypos >= -106) big_scroller_gradient_ypos = -178
-
+    big_scroller_gradient_ypos += 0.8;
+    if (big_scroller_gradient_ypos >= 0) big_scroller_gradient_ypos = -32;
     myscrolltext_big.draw(0);
-    
     big_scroller_canvas.contex.globalCompositeOperation='source-in';
     big_scroller_gradient.draw(big_scroller_canvas,0,big_scroller_gradient_ypos);
     big_scroller_canvas.contex.globalCompositeOperation='source-over';
-     
     big_scroller_canvas.draw(mycanvas,0,168);
+
+    // the diagonal lines font of the big scroller
+
+    big_scroller_lines_gradient_ypos -= 0.8;
+    if (big_scroller_lines_gradient_ypos <= -32) big_scroller_lines_gradient_ypos = 0;
+    myscrolltext_big_lines.draw(0);
+    big_scroller_canvas_lines.contex.globalCompositeOperation='source-in';
+    big_scroller_gradient.draw(big_scroller_canvas_lines,0,big_scroller_lines_gradient_ypos);
+    big_scroller_canvas_lines.contex.globalCompositeOperation='source-over';
+    big_scroller_canvas_lines.draw(mycanvas,0,168);
 
 
     // add some black borders left and right of the big scroller
-    mycanvas.quad(0,170,8,30,"#000000");
-    mycanvas.quad(312,170,8,30,"#000000");
+    mycanvas.quad(0,168,8,32,"#000000");
+    mycanvas.quad(312,168,8,32,"#000000");
 
     // draw logo
     logo.draw(mycanvas,0,0);
@@ -223,6 +220,11 @@ function render(){
     canvas_starfield.draw(mycanvas,0,100);
 
     // draw the 320*200 canvas on the scaled stage including the borders
-    mycanvas.draw(stage,60,60,1,0,2,2);
-    requestAnimFrame(render);
+    
+    fps_counter++;
+    if (fps_counter==1){
+      fps_counter = 0;
+      mycanvas.draw(stage,60,60,1,0,2,2);
+    } 
+    requestAnimFrame(render);   
 }
