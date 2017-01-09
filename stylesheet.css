@@ -19,28 +19,20 @@ a {
 
 
 .logo{
-  width: 220px;
+  width: 245px;
   float:left;
   padding: 0px;
   margin:10px;
 }
 
-.navigation-col{
-  width: 18%;
-  float:left;
-  padding: 0px;
-  margin:10px;
-}
 
 #navigation{
+
   position: fixed;
-  width: 100%;
+
   left: 0px;
   top: 0px;
   padding: 10px;
-  border: 1px solid #444444;
-  border-color: #666666 #222222 #111111 #222222;
-
 
   background: -webkit-linear-gradient(rgba(0,0,0,0.95),rgba(70,70,70,0.6)); /* For Safari 5.1 to 6.0 */
   background: -webkit-linear-gradient(rgba(0,0,0,0.95),rgba(70,70,70,0.6)); /* For Safari 5.1 to 6.0 */
@@ -48,10 +40,8 @@ a {
   background: -moz-linear-gradient(rgba(0,0,0,0.95),rgba(70,70,70,0.6)); /* For Firefox 3.6 to 15 */
   background: linear-gradient(rgba(0,0,0,0.95),rgba(70,70,70,0.6)); /* Standard syntax */
 
-  display:inline-block;
   box-shadow: 0px 5px 20px 2px #111111;
-  color: #888888;
-  text-shadow: 0px 1px 0px rgba(255,255,255,.1), 0px -1px 0px rgba(0,0,0,.5);
+  color: #aaaaaa;
 }
 
 
@@ -117,15 +107,16 @@ img.center{
   text-shadow: 0px 1px 0px rgba(255,255,255,.1), 0px -1px 0px rgba(0,0,0,.5);
 }
 
-a.link{
+.menu-link{
+  float: left;
   text-align: center;
-  word-wrap: break-word;
+  width: 240px;
   display:block;
   border: 2px solid;
   border-radius: 4px;
   border-color: #aaaaaa #666666 #333333 #666666;
   padding: 6px 3px 6px 3px;
-  margin-top:10px;
+  margin:8px;
   color: #eeeeee;
   box-shadow: 0px 5px 8px 2px #222222;
   text-transform: uppercase;
@@ -140,6 +131,16 @@ a.link{
   background: linear-gradient(#555555,#888888); /* Standard syntax */
 }
 
+.menu-link:hover{
+  background-color: #999999;
+  background: -webkit-linear-gradient(#777777,#bbbbbb); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#777777,#bbbbbb); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#777777,#bbbbbb); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#777777,#bbbbbb); /* Standard syntax */
+  color: #ffffff;
+  box-shadow: 0px 2px 4px 2px #222222;
+}
+
 a.link:hover{
   background-color: #999999;
   background: -webkit-linear-gradient(#777777,#bbbbbb); /* For Safari 5.1 to 6.0 */
@@ -148,6 +149,29 @@ a.link:hover{
   background: linear-gradient(#777777,#bbbbbb); /* Standard syntax */
   color: #ffffff;
   box-shadow: 0px 2px 4px 2px #222222;
+}
+
+a.link{
+  text-align: center;
+  width: 90%;
+  display:block;
+  border: 2px solid;
+  border-radius: 4px;
+  border-color: #aaaaaa #666666 #333333 #666666;
+  padding: 6px 3px 6px 3px;
+  margin:10px;
+  color: #eeeeee;
+  box-shadow: 0px 5px 8px 2px #222222;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 80%;
+  text-shadow: 0px 1px 0px rgba(255,255,255,.4), 0px -1px 0px rgba(0,0,0,.5);
+
+  background-color: #888888;
+  background: -webkit-linear-gradient(#555555,#888888); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#555555,#888888); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#555555,#888888); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#555555,#888888); /* Standard syntax */
 }
 
 p.info{
