@@ -176,6 +176,11 @@ a.link.short{
   width: 35%;
 }
 
+a.link.shortright{
+  float:right;
+  width: 35%;
+}
+
 p.info{
   display:block;
   color: #888888;
