@@ -27,9 +27,14 @@ a {
 
 
 #navigation{
+<<<<<<< HEAD
 
   position: fixed;
 
+=======
+  
+  width: 100%;
+>>>>>>> origin/master
   left: 0px;
   top: 0px;
   padding: 10px;
@@ -82,7 +87,7 @@ h3 {
 }
 
 #screens{
-padding-top: 90px;
+padding-top: 0px;
 }
 
 img.center{
