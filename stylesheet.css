@@ -13,29 +13,21 @@ body {
 }
 
 a {
-  color: #00aaee;
+  color: #33eeff;
   text-decoration: none;
 }
 
 
 .logo{
-  width: 220px;
+  width: 200px;
   float:left;
   padding: 0px;
-  margin:10px;
+  margin:11px;
 }
 
-.navigation-col{
-  width: 18%;
-  float:left;
-  padding: 0px;
-  margin:10px;
-}
 
 #navigation{
   width: 100%;
-  left: 0px;
-  top: 0px;
   padding: 10px;
   border: 1px solid #444444;
   border-color: #666666 #222222 #111111 #222222;
@@ -62,26 +54,29 @@ a {
 .infobox {
   background-color: #333333;
   width: 60%;
+  min-width: 400px;
   padding:40px 20px 40px 20px;
   color: #888888;
   border-radius: 16px;
   margin-bottom: 20px;
   margin-top: 80px;
   box-shadow: 0px 5px 10px 2px #111111;
-   border: 1px solid #444444;
+  border: 1px solid #444444;
   border-color: #666666 #222222 #111111 #222222;
 }
 
 
 
 h1 {
-  color: #00bbff;
+  color: #33eeff;
   font-weight:normal;
   text-transform: uppercase;
   margin-top: 0px;
-
+  letter-spacing: 4px;
+  line-height: 120%;
   margin-bottom: 10px;
-  font-size: 32px;
+  font-size: 28px;
+  text-shadow: 0px 1px 0px rgba(255,255,255,.0), 0px -2px 0px rgba(0,0,0,.3);
 }
 
 h3 {
@@ -179,6 +174,14 @@ a.link.short{
 a.link.shortright{
   float:right;
   width: 35%;
+}
+
+a.link.nav{
+
+  float: left;
+  margin: 6px;
+  font-size: 70%;
+  min-width: 160px;
 }
 
 p.info{
