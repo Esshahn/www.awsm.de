@@ -2,14 +2,24 @@
 html, body {
   margin: 0;
   padding: 0;
-  color: #444444;
-  line-height: 140%;
+  color: #666666;
+  line-height: 180%;
+  font-size: 105%;
+
+
+  background: repeating-linear-gradient(
+    -45deg,
+    #101010,
+    #101010 10px,
+    #161616 10px,
+    #161616 20px
+  );
 
 }
 
 body {
   background-color: #252522;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 a {
@@ -41,7 +51,7 @@ a {
 
   display:inline-block;
   box-shadow: 0px 5px 20px 2px #111111;
-  color: #888888;
+  color: #aaaaaa;
   text-shadow: 0px 1px 0px rgba(255,255,255,.1), 0px -1px 0px rgba(0,0,0,.5);
 }
 
@@ -49,35 +59,51 @@ a {
 #footer {
   padding-top: 100px;
   font-style: italic;
+  padding-bottom: 40px;
 }
 
 .infobox {
-  background-color: #333333;
+  background-color: rgba(30,30,30,0.60);
   width: 60%;
+  line-height: 180%;
   min-width: 400px;
-  padding:40px 20px 40px 20px;
-  color: #888888;
+  padding:20px 20px 60px 20px;
+  color: #cccccc;
   border-radius: 16px;
   margin-bottom: 20px;
   margin-top: 80px;
-  box-shadow: 0px 5px 10px 2px #111111;
+  box-shadow: 0px 5px 10px 2px #080808;
   border: 1px solid #444444;
   border-color: #666666 #222222 #111111 #222222;
+
+  background: repeating-linear-gradient(
+    -45deg,
+    #1c1c1c,
+    #1c1c1c 15px,
+    #1f1f1f 15px,
+    #1f1f1f 30px
+  );
+    
+
 }
+
+
 
 
 
 h1 {
-  color: #33eeff;
+  color: #11ccdd;
   font-weight:normal;
-  text-transform: uppercase;
   margin-top: 0px;
   letter-spacing: 4px;
   line-height: 120%;
   margin-bottom: 10px;
-  font-size: 28px;
-  text-shadow: 0px 1px 0px rgba(255,255,255,.0), 0px -2px 0px rgba(0,0,0,.3);
+  font-size: 240%;
+  text-shadow: 0px 2px 0px rgba(0,255,255,.2), 0px 4px 4px rgba(0,0,0,.5);
+  font-family: 'Courgette', cursive;
 }
+
+
 
 h3 {
   color: #bbbbbb;
@@ -105,9 +131,9 @@ img.center{
   margin: 10px;
   background-color: #333333;
   display:inline-block;
-  box-shadow: 0px 5px 10px 2px #111111;
+  box-shadow: 0px 5px 10px 2px #080808;
   vertical-align: top;
-  color: #888888;
+  color: #aaaaaa;
   text-shadow: 0px 1px 0px rgba(255,255,255,.1), 0px -1px 0px rgba(0,0,0,.5);
 }
 
@@ -121,7 +147,7 @@ a.link{
   padding: 6px 23px 6px 23px;
   margin-top:10px;
   color: #eeeeee;
-  box-shadow: 0px 5px 8px 2px #222222;
+  box-shadow: 0px 12px 8px 2px rgba(0,0,0,.4);
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 80%;
@@ -186,7 +212,7 @@ a.link.nav{
 
 p.info{
   display:block;
-  color: #888888;
+  color: #cccccc;
   margin: 0px;
   padding: 4px 10px 4px 10px;
   text-align: left;
@@ -204,7 +230,7 @@ p.info a{
   display:block;
   padding: 2px;
   margin-top:10px;
-  color: #cccccc;
+  color: #33eeff;
   letter-spacing: 2px;
    text-shadow: 0 1px 0 #777,
                0 2px 0 #444,              
@@ -222,21 +248,19 @@ p.info a{
 }
 
 .newsdate{
-  vertical-align: top;
-  margin-right: 20px;
+
+  margin-right: 10px;
   min-width: 120px;
-  margin-bottom: 10px;
   float: left;
-  background-color: #222222;
-  padding: 6px;
-  padding-right: 12px;
-  text-align: left;
+  background-color: #080808;
+  text-align: center;
   text-transform: uppercase;
- 
+  color: #bbbbbb;
 }
 
 .newstext{
   text-align: left;
+  margin-bottom: 32px;
 }
 
 .clear
